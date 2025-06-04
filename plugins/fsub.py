@@ -1,32 +1,55 @@
-from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
-from config import AUTH_CHANNELS
 from pyrogram import Client
-from pyrogram.types import Message
-from typing import List
-from pyrogram.errors import UserNotParticipant
+from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton, Message
+from pyrogram.errors import UserNotParticipant, ChannelInvalid, ChannelPrivate
+from config import AUTH_CHANNELS
+from typing import List, Tuple
 
 async def get_fsub(bot: Client, message: Message) -> bool:
-    tb = await bot.get_me()
     user_id = message.from_user.id
-    not_joined_channels = []
+    bot_username = (await bot.get_me()).username
+    not_joined_channels: List[Tuple[str, str]] = []
+
     for channel_id in AUTH_CHANNELS:
         try:
+            # Check if user is a participant
             await bot.get_chat_member(channel_id, user_id)
         except UserNotParticipant:
-            chat = await bot.get_chat(channel_id)
-            invite_link = chat.invite_link or await bot.export_chat_invite_link(channel_id)
-            not_joined_channels.append((chat.title, invite_link))
+            try:
+                chat = await bot.get_chat(channel_id)
+                # Try getting invite link or export a new one
+                invite_link = chat.invite_link
+                if not invite_link:
+                    invite_link = await bot.export_chat_invite_link(channel_id)
+                not_joined_channels.append((chat.title, invite_link))
+            except (ChannelPrivate, ChannelInvalid):
+                print(f"❌ Bot cannot access channel ID: {channel_id}. Check admin rights or ID.")
+                continue
+        except Exception as e:
+            print(f"⚠️ Unexpected error checking channel {channel_id}: {e}")
+            continue
+
     if not_joined_channels:
+        # Build inline keyboard
         join_buttons = []
         for i in range(0, len(not_joined_channels), 2):
-            row = []
-            for j in range(2):
-                if i + j < len(not_joined_channels):
-                    title, link = not_joined_channels[i + j]
-                    button_text = f"{i + j + 1}. {title}"
-                    row.append(InlineKeyboardButton(button_text, url=link))
+            row = [
+                InlineKeyboardButton(
+                    f"{i + 1}. {title}", url=link
+                )
+                for title, link in not_joined_channels[i:i + 2]
+            ]
             join_buttons.append(row)
-        join_buttons.append([InlineKeyboardButton("🔄 Try Again", url=f"https://telegram.me/{tb.username}?start=start")])
-        await message.reply(f"**🎭 {message.from_user.mention}, As I see, you haven’t joined my channel yet.\nPlease join by clicking the button below.**", reply_markup=InlineKeyboardMarkup(join_buttons))
+
+        # Add "Try Again" button
+        join_buttons.append([
+            InlineKeyboardButton("🔄 Try Again", url=f"https://t.me/{bot_username}?start=start")
+        ])
+
+        await message.reply(
+            f"**🎭 {message.from_user.mention}, you haven’t joined the required channel(s).\nPlease join by clicking the button(s) below.**",
+            reply_markup=InlineKeyboardMarkup(join_buttons),
+            quote=True
+        )
         return False
+
     return True
