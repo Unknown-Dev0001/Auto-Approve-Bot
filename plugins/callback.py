@@ -9,10 +9,10 @@ async def callback_query_handler(client, query: CallbackQuery):
             text.START.format(query.from_user.mention),
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup([
-                [InlineKeyboardButton('⇆ ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘs ⇆', url=f"https://telegram.me/QuickAcceptBot?startgroup=true&admin=invite_users")],
+                [InlineKeyboardButton('⇆ ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘs ⇆', url=f"https://telegram.me/AJRAxBot?startgroup=true&admin=invite_users")],
                 [InlineKeyboardButton('ᴀʙᴏᴜᴛ', callback_data='about'),
                  InlineKeyboardButton('ʜᴇʟᴘ', callback_data='help')],
-                [InlineKeyboardButton('⇆ ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ᴄʜᴀɴɴᴇʟ ⇆', url=f"https://telegram.me/QuickAcceptBot?startchannel=true&admin=invite_users")]
+                [InlineKeyboardButton('⇆ ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ᴄʜᴀɴɴᴇʟ ⇆', url=f"https://telegram.me/AJRAxBot?startchannel=true&admin=invite_users")]
             ])
         )
 
@@ -21,8 +21,8 @@ async def callback_query_handler(client, query: CallbackQuery):
             text.HELP.format(query.from_user.mention),
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup([
-                [InlineKeyboardButton('ᴜᴩᴅᴀᴛᴇꜱ', url='https://telegram.me/Techifybots'),
-                 InlineKeyboardButton('ꜱᴜᴩᴩᴏʀᴛ', url='https://telegram.me/TechifySupport')],
+                [InlineKeyboardButton('ᴜᴩᴅᴀᴛᴇꜱ', url='https://telegram.me/BotVerseRavi'),
+                 InlineKeyboardButton('ꜱᴜᴩᴩᴏʀᴛ', url='https://telegram.me/BotVerseRaviSupport')],
                 [InlineKeyboardButton('ʙᴀᴄᴋ', callback_data="start"),
                  InlineKeyboardButton('ᴄʟᴏꜱᴇ', callback_data="close")]
             ])
@@ -33,8 +33,8 @@ async def callback_query_handler(client, query: CallbackQuery):
             text.ABOUT,
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup([
-                [InlineKeyboardButton('💥 ʀᴇᴘᴏ', url='https://github.com/TechifyBots/Auto-Approve-Bot'),
-                 InlineKeyboardButton('👨‍💻 ᴏᴡɴᴇʀ', url='https://telegram.me/TechifyRahul')],
+                [InlineKeyboardButton('💥 ᴜᴩᴅᴀᴛᴇꜱ', url='https://t.me/BotVerseRavi'),
+                 InlineKeyboardButton('👨‍💻 ᴏᴡɴᴇʀ', url='https://telegram.me/Unknown_RK01')],
                 [InlineKeyboardButton("ʙᴀᴄᴋ", callback_data="start"),
                  InlineKeyboardButton("ᴄʟᴏꜱᴇ", callback_data="close")]
             ])
