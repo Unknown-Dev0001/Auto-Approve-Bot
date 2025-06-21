@@ -35,7 +35,7 @@ async def callback_query_handler(client, query: CallbackQuery):
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup([
                 [InlineKeyboardButton('💥 ᴜᴩᴅᴀᴛᴇꜱ', url='https://t.me/BotVerseRavi'),
-                 InlineKeyboardButton('👨‍💻 ᴏᴡɴᴇʀ', user_id=int(ADMIN))],
+                 InlineKeyboardButton('👨‍💻 ᴏᴡɴᴇʀ', url='https://t.me/Unknown_RK01')],
                 [InlineKeyboardButton("ʙᴀᴄᴋ", callback_data="start"),
                  InlineKeyboardButton("ᴄʟᴏꜱᴇ", callback_data="close")]
             ])
