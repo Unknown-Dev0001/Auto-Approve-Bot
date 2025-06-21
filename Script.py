@@ -5,7 +5,7 @@ class text(object):
 
 𝖩𝗎𝗌𝗍 𝖺𝖽𝖽 𝗆𝖾 𝗂𝗇 𝗒𝗈𝗎𝗋 𝖼𝗁𝖺𝗇𝗇𝖾𝗅𝗌 𝖺𝗇𝖽 𝗀𝗋𝗈𝗎𝗉𝗌 𝗐𝗂𝗍𝗁 𝗉𝖾𝗋𝗆𝗂𝗌𝗌𝗂𝗈𝗇 𝗍𝗈 𝖺𝖽𝖽 𝗇𝖾𝗐 𝗆𝖾𝗆𝖻𝖾𝗋𝗌.
 
-<b><blockquote>ᴍᴀɪɴᴛᴀɪɴᴇᴅ ʙʏ : <a href='https://telegram.me/TechifyRahul'>ʀᴀʜᴜʟ</a></blockquote></b>"""
+<b><blockquote>ᴍᴀɪɴᴛᴀɪɴᴇᴅ ʙʏ : <a href='https://telegram.me/Unknown_RK01'>𝑅𝑎𝑣𝑖 𝐾𝑢𝑚𝑎𝑟</a></blockquote></b>"""
 
     LOG = """#New_User
 
@@ -16,11 +16,10 @@ ID: {}"""
 
 Library: Pyrogram 📚  
 Language: Python 🐍  
-Server: Koyeb 🌐  
-Build Status: V1.3 🚀  
-Source Code: Available (Free) 💻
+Server: VPS 🌐  
+Build Status: V1.3 🚀
 
-<b><blockquote>ᴍᴀɪɴᴛᴀɪɴᴇᴅ ʙʏ : <a href='https://telegram.me/TechifyRahul'>ʀᴀʜᴜʟ</a></blockquote></b>"""
+<b><blockquote>ᴍᴀɪɴᴛᴀɪɴᴇᴅ ʙʏ : <a href='https://telegram.me/Unknown_RK01'>𝑅𝑎𝑣𝑖 𝐾𝑢𝑚𝑎𝑟</a></blockquote></b>"""
 
     HELP = """{},
 
@@ -35,4 +34,4 @@ Source Code: Available (Free) 💻
 ➥ 𝖭𝗈𝗐 𝗎𝗌𝖾 /accept 𝖼𝗈𝗆𝗆𝖺𝗇𝖽 𝗍𝗈 𝖺𝖼𝖼𝖾𝗉𝗍 𝖺𝗅𝗅 𝗉𝖾𝗇𝖽𝗂𝗇𝗀 𝗋𝖾𝗊𝗎𝖾𝗌𝗍𝗌.
 ➥ 𝖭𝗈𝗐 𝗃𝗎𝗌𝗍 𝗎𝗌𝖾 /logout 𝖼𝗈𝗆𝗆𝖺𝗇𝖽 𝖿𝗈𝗋 𝗅𝗈𝗀𝗈𝗎𝗍.
 
-<b><blockquote>𝖲𝗍𝗂𝗅𝗅 𝗁𝖺𝗏𝖾 𝗂𝗌𝗌𝗎𝖾𝗌? 𝖢𝗈𝗇𝗍𝖺𝖼𝗍 <a href='https://telegram.me/TechifyRahul'>𝖱𝖺𝗁𝗎𝗅</a></blockquote></b>"""
+<b><blockquote>𝖲𝗍𝗂𝗅𝗅 𝗁𝖺𝗏𝖾 𝗂𝗌𝗌𝗎𝖾𝗌? 𝖢𝗈𝗇𝗍𝖺𝖼𝗍 <a href='https://telegram.me/Unknown_RK01'>𝑅𝑎𝑣𝑖 𝐾𝑢𝑚𝑎𝑟</a></blockquote></b>"""
